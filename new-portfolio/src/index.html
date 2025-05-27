@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="scss/main.scss">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="display-4">Hi, my name is <span class="text-primary">Your Name</span></h1>
+                        <p class="lead">I'm a Developer based in Your City.</p>
+                        <a href="#about" class="btn btn-primary btn-lg mt-3">Know more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2 class="text-center mb-5 display-5">About Me</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                        <img src="https://via.placeholder.com/300x300" class="img-fluid rounded-circle shadow-sm" alt="Your Name - Placeholder">
+                    </div>
+                    <div class="col-md-8">
+                        <p>Hello! I'm a passionate and results-oriented developer with a knack for creating elegant solutions to complex problems. My journey into the world of coding began with a fascination for how websites and applications come to life, and that curiosity continues to drive me today.</p>
+                        <p>I have experience in front-end and back-end technologies, including HTML, CSS, JavaScript, and frameworks like React and Node.js. I'm always eager to learn new tools and techniques to enhance my skills and deliver high-quality products.</p>
+                        <p>When I'm not coding, I enjoy exploring the outdoors, reading about the latest tech trends, and contributing to open-source projects. I believe in continuous learning and collaboration.</p>
+                        <p class="text-center text-md-start mt-4">
+                            <a href="#resume-link-placeholder" class="btn btn-outline-primary btn-lg">View Resume</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container">
+                <h2 class="text-center mb-5 display-5">My Projects</h2>
+                <div class="row">
+                    <!-- Project 1 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://via.placeholder.com/350x250?text=Project+Alpha" class="card-img-top" alt="Project Alpha">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Project Alpha</h5>
+                                <p class="card-text">A web application that helps users manage their daily tasks and improve productivity. Features include a drag-and-drop interface and user authentication.</p>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-primary me-2">Live Demo</a>
+                                    <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://via.placeholder.com/350x250?text=Project+Beta" class="card-img-top" alt="Project Beta">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Project Beta</h5>
+                                <p class="card-text">An e-commerce platform designed for small businesses to showcase and sell their products online. Integrated with Stripe for payments.</p>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-primary me-2">Live Demo</a>
+                                    <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://via.placeholder.com/350x250?text=Project+Gamma" class="card-img-top" alt="Project Gamma">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Project Gamma</h5>
+                                <p class="card-text">A data visualization tool that takes CSV data and generates interactive charts and graphs. Built with D3.js and React.</p>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-primary me-2 disabled">Live Demo</a>
+                                    <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2 class="text-center mb-4 display-5">Contact</h2>
+                <p class="text-center lead mb-5">I'm currently available for freelance work or new opportunities. Feel free to reach out!</p>
+                <div class="text-center">
+                    <a href="mailto:your.email@example.com" class="btn btn-primary btn-lg">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0">Copyright &copy; Your Name <span id="current-year"></span></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

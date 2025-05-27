@@ -1,0 +1,356 @@
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Custom SCSS Variables
+$primary-color: #0d6efd;    // Bootstrap's default blue, can be customized
+$secondary-color: #6c757d;  // Bootstrap's default secondary
+$hero-bg-color: #e9ecef;    // A light grey, similar to Bootstrap's jumbotron
+$hero-text-color: #212529;  // Dark text color
+$hero-lead-text-color: #495057; // Slightly lighter for lead text
+$white-color: #ffffff;
+$light-text: #f8f9fa; // For text on dark backgrounds
+$dark-bg-color: #212529; // Consistent dark background for header/footer
+
+// Global Styles
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif; // Placeholder, will be refined later
+    color: $hero-text-color;
+    background-color: $white-color;
+    line-height: 1.6;
+    padding-top: 70px; // Default padding for fixed header
+}
+
+.display-5 { // Global refinement for section titles
+    font-weight: 600;
+    margin-bottom: 2.5rem !important; // Ensure consistent bottom margin
+}
+
+// Header Styling
+header {
+    background-color: $dark-bg-color;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; // Ensure header is above other content
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: 0 10px;
+
+            a {
+                color: $light-text;
+                text-decoration: none;
+                padding: 0.5rem 0.75rem;
+                border-radius: 0.25rem;
+                transition: background-color 0.3s ease, color 0.3s ease;
+
+                &:hover,
+                &.active { // Assuming an active class might be added via JS for current section
+                    background-color: $primary-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+
+// Hero Section Styling
+#hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $hero-bg-color;
+    color: $hero-text-color;
+    padding: 4rem 1rem; // Adjusted padding for responsiveness
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center; // Ensure content within container is centered
+    }
+
+    h1 {
+        font-size: 3.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+
+        .text-primary {
+            color: $primary-color !important;
+        }
+    }
+
+    .lead {
+        font-size: 1.35rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+        color: $hero-lead-text-color;
+        max-width: 700px; // Prevent lead text from being too wide
+    }
+
+    .btn-primary { // This is the hero button
+        background-color: $primary-color;
+        border-color: $primary-color;
+        padding: 0.75rem 1.75rem;
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin-top: 1rem; // Adjusted margin
+
+        &:hover {
+            background-color: darken($primary-color, 7.5%);
+            border-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// About Section Styling
+#about {
+    background-color: $white-color;
+    padding: 4rem 1rem;
+
+    p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: $hero-lead-text-color;
+        margin-bottom: 1.25rem;
+    }
+
+    .img-fluid.rounded-circle {
+        max-width: 220px; // Slightly smaller for better balance
+        border: 5px solid $hero-bg-color;
+    }
+
+    .btn-outline-primary {
+        font-weight: 500;
+        padding: 0.6rem 1.3rem;
+        font-size: 1rem;
+    }
+}
+
+// Projects Section Styling
+#projects {
+    background-color: $hero-bg-color;
+    padding: 4rem 1rem;
+
+    .card {
+        border: none;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.2)!important;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: $primary-color;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: $hero-lead-text-color;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            &:hover {
+                background-color: darken($primary-color, 7.5%);
+                border-color: darken($primary-color, 10%);
+            }
+        }
+        
+        .btn-outline-secondary {
+            border-color: $secondary-color;
+            color: $secondary-color;
+            &:hover {
+                background-color: $secondary-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+// Contact Section Styling
+#contact {
+    background-color: $white-color;
+    padding: 4rem 1rem;
+
+    .lead {
+        font-size: 1.25rem;
+        color: $hero-lead-text-color;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem !important; // Bootstrap class mb-5 might be too much
+    }
+
+    .btn-primary { // This is the contact button
+        padding: 0.8rem 2rem;
+        font-size: 1.15rem;
+        font-weight: 500;
+        
+        &:hover {
+            background-color: darken($primary-color, 7.5%);
+            border-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// Footer styles
+footer.bg-dark {
+    background-color: $dark-bg-color !important;
+    color: $light-text;
+    padding: 2rem 0; // Adjusted padding
+
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+}
+
+// Media Queries for Responsiveness
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    body {
+        padding-top: 100px; // Adjusted for potentially taller header when nav links stack
+    }
+    header nav ul li {
+        display: block; // Stack navigation links
+        margin: 0.5rem 0;
+        a {
+            display: block; // Make whole area clickable
+            padding: 0.75rem;
+        }
+    }
+
+    .display-5 { // Section titles
+        font-size: 1.75rem; // Further reduce for very small screens
+        margin-bottom: 2rem !important;
+    }
+
+    #hero {
+        padding: 2.5rem 1rem;
+        min-height: 80vh; // Slightly less height on mobile
+        h1 {
+            font-size: 2.25rem; // Reduce hero headline
+        }
+        .lead {
+            font-size: 1.15rem; // Reduce hero lead
+        }
+        .btn-primary { // Hero button
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+        }
+    }
+
+    #about, #projects, #contact {
+        padding: 2.5rem 1rem;
+    }
+
+    #about .img-fluid.rounded-circle {
+        max-width: 180px; // Smaller image on mobile
+    }
+    #about p {
+        font-size: 0.95rem; // Slightly smaller text for mobile
+    }
+
+    #projects .card .card-text {
+        font-size: 0.85rem;
+    }
+    #projects .card .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    #contact .lead {
+        font-size: 1.1rem;
+    }
+    #contact .btn-primary { // Contact button
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body {
+        // Header likely doesn't need to stack here, so padding-top can be default
+        padding-top: 70px; 
+    }
+    header nav ul li a { // Slightly less padding than desktop but more than stacked
+        padding: 0.4rem 0.6rem;
+        margin: 0 5px;
+    }
+
+    .display-5 { // Section titles
+        font-size: 2rem;
+    }
+
+    #hero {
+        padding: 3rem 1rem;
+        h1 {
+            font-size: 2.75rem;
+        }
+        .lead {
+            font-size: 1.25rem;
+        }
+    }
+
+    #about, #projects, #contact {
+        padding: 3rem 1rem;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    // Body padding-top is likely fine with the default 70px.
+    // Header nav is also likely fine as inline.
+
+    .display-5 { // Section titles
+        font-size: 2.25rem; // Slightly smaller than default .display-5 if needed
+    }
+
+    #hero {
+        padding: 3.5rem 1rem;
+        h1 {
+            font-size: 3rem; // Adjust if 3.25rem is too large
+        }
+        .lead {
+            font-size: 1.3rem;
+        }
+    }
+     #about, #projects, #contact {
+        padding: 3.5rem 1rem;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+// Most styles are desktop-first, but can add specific tweaks here if needed
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
